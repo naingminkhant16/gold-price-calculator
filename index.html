@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <style>
+        .form-container {
+            max-width: 600px;
+            padding: 20px;
+            margin-top: 40px;
+            /* border: 1px solid #eee; */
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        footer {
+            text-align: center;
+            border-top: 0.7px solid #eee;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            padding: 20px;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .form-container {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container container">
+        <h3 class="text-center">Convert to ရွေ:</h3>
+        <form class="container my-5" style="max-width: 380px;">
+            <div class="md-4">
+                <label class="form-label">ကျပ်-</label>
+                <div id="kyatErr"></div>
+                <input type="number" class="form-control" id="kyat" value="0" required>
+            </div>
+            <div class="md-4">
+                <label class="form-label">ပဲ-</label>
+                <div id="paeErr"></div>
+                <input type="number" class="form-control" id="pae" value="0" required>
+            </div>
+            <div class="md-4">
+                <label class="form-label">ရွေ:-</label>
+                <div id="yErr"></div>
+                <input type="number" class="form-control" id="y" value="0" required>
+            </div><br>
+            <div class="md-4">
+                <button class="btn btn-primary w-100" id="executeYeway">Execute</button>
+            </div>
+            <br>
+            <div id="kyatResult" style="font-weight: bolder;font-size: 26px;"></div>
+        </form>
+    </div>
+    <div class="form-container container">
+        <h3 class="text-center">Gold Price Calculator</h3>
+        <form action="" class="container my-5" style="max-width: 380px;">
+            <div class="md-4">
+                <label class="form-label">ယနေ့ ပေါက် ဈေး(1ကျပ်သားဈေး) -</label>
+                <div id="poutzayErr"></div>
+                <input type="number" class="form-control" id="poutZay" required>
+            </div>
+            <div class="md-4">
+                <label class="form-label">ရွေ:-</label>
+                <div id="yewayErr"></div>
+                <input type="number" class="form-control" id="yeway" required>
+            </div>
+            <div class="md-4">
+                <label class="form-label">ပဲရည်-</label>
+                <div id="paeyayErr"></div>
+                <select class="form-select" id="paeyay" required>
+                    <option selected disabled value="">Select ပဲရည်</option>
+                    <option value="16">16</option>
+                    <option value="15">15 </option>
+                    <option value="14">14</option>
+                    <option value="12">12</option>
+                </select>
+            </div><br>
+            <div class="md-4">
+                <button class="btn btn-primary w-100" id="execute">Execute</button>
+            </div>
+            <br>
+            <div id="result" style="font-weight: bolder;font-size: 26px;"></div>
+        </form>
+    </div><br><br>
+    <footer>
+        copyright &copy; 2022 ,Created by <a href="https://github.com/naingminkhant16">naingminkhant16</a>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
